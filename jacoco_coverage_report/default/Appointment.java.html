@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Appointment.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Project One</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Appointment.java</span></div><h1>Appointment.java</h1><pre class="source lang-java linenums">import java.util.Date;
+
+/**
+ * Appointment Class for mobile application
+ */
+public class Appointment {
+	// Required unique ID immutable and &lt;= 10 characters
+	private String appointmentId;
+	// Required Date &gt;= currentDate
+	private Date appointmentDate;
+	// Required Length &lt;= 50 characters
+	private String description;
+	
+	/**
+	 * Creates a new Appointment Object and validates required inputs.
+	 * 
+	 * @param appointmentId
+	 * @param appointmentDate
+	 * @param description
+	 */
+<span class="fc" id="L21">	public Appointment(String appointmentId, Date appointmentDate, String description) {</span>
+		// Appointment ID is a required field. Is immutable, must be 10 characters or less and cannot be null.
+<span class="fc bfc" id="L23" title="All 4 branches covered.">		if (appointmentId == null || appointmentId.length() &gt; 10) {</span>
+<span class="fc" id="L24">			throw new IllegalArgumentException(&quot;Appointment Id must not be null or greater than 10 characters&quot;);</span>
+		}
+		
+		// Appointment Date is a required field. Date cannot be null and Date cannot be in the past.
+<span class="fc bfc" id="L28" title="All 4 branches covered.">		if (appointmentDate == null || appointmentDate.before(new Date())) {</span>
+<span class="fc" id="L29">			throw new IllegalArgumentException(&quot;Appointment Date must not be null and cannot be a Date in the past.&quot;);</span>
+		}
+		
+		// Description is a required field. Description cannot be null and must be 50 characters or less.
+<span class="fc bfc" id="L33" title="All 4 branches covered.">		if (description == null || description.length() &gt; 50) {</span>
+<span class="fc" id="L34">			throw new IllegalArgumentException(&quot;Description must not be null and must be 50 characters or less.&quot;);</span>
+		}
+<span class="fc" id="L36">		this.appointmentId = appointmentId;</span>
+<span class="fc" id="L37">		this.appointmentDate = appointmentDate;</span>
+<span class="fc" id="L38">		this.description = description;</span>
+<span class="fc" id="L39">	}</span>
+	
+	/**
+	 * Getter for appointment Id
+	 */
+	public String getAppointmentId() {
+<span class="fc" id="L45">		return this.appointmentId;</span>
+	}
+	
+	/**
+	 * Getter for appointment Date
+	 */
+	public Date getAppointmentDate() {
+<span class="fc" id="L52">		return this.appointmentDate;</span>
+	}
+	
+	/**
+	 * Getter for appointment description
+	 */
+	public String getDescription() {
+<span class="fc" id="L59">		return this.description;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Task.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Project One</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Task.java</span></div><h1>Task.java</h1><pre class="source lang-java linenums">/**
+ * Task Class
+ */
+public class Task {
+	private final String taskId;
+	private String name;
+	private String description;
+	
+	/**
+	 * 
+	 * @param taskId
+	 * @param name
+	 * @param description
+	 */
+<span class="fc" id="L15">	public Task(String taskId, String name, String description) {</span>
+		// Add checks for property conditions
+<span class="fc bfc" id="L17" title="All 4 branches covered.">		if (taskId == null || taskId.length() &gt; 10) {</span>
+<span class="fc" id="L18">			throw new IllegalArgumentException(&quot;ADD UNIQUE ERROR MESSAGE&quot;);</span>
+		}
+		
+<span class="fc bfc" id="L21" title="All 4 branches covered.">		if (name == null || name.length() &gt; 20) {</span>
+<span class="fc" id="L22">			throw new IllegalArgumentException(&quot;ALIGN WITH ERROR MESSAGE BELOW&quot;);</span>
+		}
+		
+<span class="fc bfc" id="L25" title="All 4 branches covered.">		if (description == null || description.length() &gt; 50) {</span>
+<span class="fc" id="L26">			throw new IllegalArgumentException(&quot;ALIGN WITH ERROR MESSAGE BELOW&quot;);</span>
+		}
+		
+		
+		// Init props
+		// taskId required property immutable no longer than 10 characters
+<span class="fc" id="L32">		this.taskId = taskId;</span>
+		// name no longer than 20 chars non-null
+<span class="fc" id="L34">		this.name = name;</span>
+		// description no longeer than 50 chars non-null
+<span class="fc" id="L36">		this.description = description;</span>
+<span class="fc" id="L37">	}</span>
+	
+	// Getters and Setters
+	public String getTaskId() {
+<span class="fc" id="L41">		return taskId;</span>
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public String getName() {
+<span class="fc" id="L49">		return name;</span>
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public String getDescription() {
+<span class="fc" id="L57">		return description;</span>
+	}
+	
+	/**
+	 * 
+	 * @param name
+	 */
+	public void setName(String name) {
+		// Add condition and throw exception (non-null &amp; length &lt; 20)
+<span class="fc bfc" id="L66" title="All 4 branches covered.">		if (name == null || name.length() &gt; 20) {</span>
+<span class="fc" id="L67">			throw new IllegalArgumentException(&quot;TODO: ADD ERROR MESSAGE&quot;);</span>
+		}
+<span class="fc" id="L69">		this.name = name;</span>
+<span class="fc" id="L70">	}</span>
+	
+	/**
+	 * 
+	 * @param description
+	 */
+	public void setDescription(String description) {
+<span class="fc bfc" id="L77" title="All 4 branches covered.">		if (description == null || description.length() &gt; 50) {</span>
+<span class="fc" id="L78">			throw new IllegalArgumentException(&quot;TODO: ADD ERROR MESSAGE&quot;);</span>
+		}
+<span class="fc" id="L80">		this.description = description;</span>
+<span class="fc" id="L81">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
