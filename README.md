@@ -103,10 +103,7 @@ This project achieves **100% code coverage** across all classes, demonstrating t
 | **TaskService**        | 100% (90)    | 100% (10) | 100% (23) | 100% (6)  |
 | **ContactService**     | 100% (114)   | 100% (10) | 100% (31) | 100% (9)  |
 
-📊 *
-*[View Interactive JaCoCo Report](https://joshsevy.github.io/CS_320-Software-Test-Automation-QA-Portfolio/docs/index.html)
-** *(Enable GitHub
-Pages in Settings → Pages → Deploy from branch: main → /docs)*
+📊 **[View Interactive JaCoCo Report](https://joshsevy.github.io/CS_320-Software-Test-Automation-QA-Portfolio/docs/index.html)**
 
 ---
 
