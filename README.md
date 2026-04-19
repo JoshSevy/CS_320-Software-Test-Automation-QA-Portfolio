@@ -83,15 +83,23 @@ from the beginning.
 
 This project achieves **100% code coverage** across all classes, demonstrating thorough testing practices:
 
+### Overall Metrics
 | Metric | Coverage |
 |--------|----------|
 | **Instructions** | 100% (536/536) |
 | **Branches** | 100% (78/78) |
 | **Lines** | 100% (147/147) |
 | **Methods** | 100% (44/44) |
-| **Classes** | 100% (6/6) |
 
-📊 [View Full JaCoCo Report](./jacoco_coverage_report/index.html)
+### Per-Class Coverage
+| Class | Instructions | Branches | Lines | Methods |
+|-------|--------------|----------|-------|---------|
+| **Appointment** | 100% (56) | 100% (12) | 100% (14) | 100% (4) |
+| **Task** | 100% (84) | 100% (20) | 100% (22) | 100% (6) |
+| **Contact** | 100% (136) | 100% (20) | 100% (44) | 100% (15) |
+| **AppointmentService** | 100% (56) | 100% (6) | 100% (13) | 100% (4) |
+| **TaskService** | 100% (90) | 100% (10) | 100% (23) | 100% (6) |
+| **ContactService** | 100% (114) | 100% (10) | 100% (31) | 100% (9) |
 
 ---
 
