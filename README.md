@@ -101,6 +101,9 @@ This project achieves **100% code coverage** across all classes, demonstrating t
 | **TaskService** | 100% (90) | 100% (10) | 100% (23) | 100% (6) |
 | **ContactService** | 100% (114) | 100% (10) | 100% (31) | 100% (9) |
 
+📊 **[View Interactive JaCoCo Report](https://JoshSevy.github.io/CS_320_Project_One/index.html)** *(Enable GitHub 
+Pages in Settings → Pages → Deploy from branch: main → /docs)*
+
 ---
 
 ## Tools & Technologies
